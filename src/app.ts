@@ -139,6 +139,17 @@ app.delete("/Car/:id", async (request, response) => {
 
   response.json(deleteCar);
 });
+
+app.delete("/Rented/:id", async (request, response) => {
+  const { id  } = request.params;
+  const deleteRented = await prisma.rented.delete({
+    where: {
+      id: Number(id),
+    },
+  });
+
+  response.json(deleteRented);
+});
 app.listen(5555, () => {
   console.log(`Server Running = in port http://localhost:${port}`);
 });

@@ -94,15 +94,28 @@ Content-Type: application/json
     "retent": true
 }
 
+//Método de deletar carro alugado
+
+### Req DELETE
+
+DELETE http://localhost:5555/rented/3
+Content-Type: application/json
+
 //Método de deletar cliente
 ### Req DELETE
-DELETE http://localhost:5555/client/1
+
+DELETE http://localhost:5555/client/3
 Content-Type: application/json
 
 //Método de deletar carro
 ### Req DELETE
-DELETE http://localhost:5555/car/3
+DELETE http://localhost:5555/car/2
 Content-Type: application/json
+
+
+
+
+
 ###
 
 ### Res POST 
