@@ -1,0 +1,114 @@
+// Método de listar todos os clientes
+### Req GET
+
+GET http://localhost:5555/listClient
+
+// Método de listar todos os carros
+### Req GET
+
+GET http://localhost:5555/listCar
+
+// Método de listar todos os carros alugados
+### Req GET
+
+GET http://localhost:5555/listRented
+
+//Método de buscar cliente especifico
+### Req GET
+
+GET http://localhost:5555/client/2
+
+//Método de buscar carro especifico
+### Req GET
+
+GET http://localhost:5555/car/5
+
+
+//Método de adicionar cliente
+### Res POST 
+
+POST http://localhost:5555/client
+Content-Type: application/json
+
+
+{
+    "name": "clecio", 
+    "email": "clecio@fema.com", 
+    "phone":"55 998985425"
+}
+
+//Método de adicionar carro
+### Res POST 
+
+POST http://localhost:5555/car
+Content-Type: application/json
+
+
+{
+    "brand": "fiat", 
+    "model": "punto",
+    "year": 2020,
+    "retent": true  
+}
+
+//Método de adicionar carro alugado
+### Res POST 
+
+POST http://localhost:5555/rented
+Content-Type: application/json
+
+
+{
+    "carroId": 6,
+    "clienteId": 5,
+    "dataRetirada": "27-03-2023"
+    
+    
+    
+}
+
+//Método de atualizar cliente
+### Req PUT
+
+PUT http://localhost:5555/client/2
+Content-Type: application/json
+
+
+{
+    "name": "Juca", 
+    "email": "Juca@fema.com", 
+    "phone":"55 996452587"
+}
+
+//Método de atualizar carro
+### Req PUT
+
+PUT http://localhost:5555/car/2
+Content-Type: application/json
+
+
+{
+    "brand": "toyota", 
+    "model": "sw4",
+    "year": 2016,
+    "retent": true
+}
+
+//Método de deletar cliente
+### Req DELETE
+DELETE http://localhost:5555/client/1
+Content-Type: application/json
+
+//Método de deletar carro
+### Req DELETE
+DELETE http://localhost:5555/car/3
+Content-Type: application/json
+###
+
+### Res POST 
+# POST http://localhost:3333/post/1 
+# Content-Type: application/json
+
+# {
+# "title":"Post via express", "content":"post via express"
+# 
